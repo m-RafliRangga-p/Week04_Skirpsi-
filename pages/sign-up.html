@@ -4,8 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <link
+      rel="icon"
+      href="../assets/img/Light-modified.png"
+      type="image/x-icon"
+    />
+    <!-- link css -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Icons Bootsrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <h1>Sign Up</h1>
+    <div class="min-vh-100" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="container py-3">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <!-- Card Form Login -->
+            <div class="card shadow-lg" style="border-radius: 1rem">
+              <div class="card-body px-4 py-2 text-center">
+                <!-- title form -->
+                <h3 class="my-4 fw-bolder">Sign Up</h3>
+
+                <!-- input username -->
+                <div class="form-outline mb-2">
+                  <label class="w-100 text-start form-label" for="input-email"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    id="input-username"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <!-- input email -->
+                <div class="form-outline mb-2">
+                  <label class="w-100 text-start form-label" for="input-email"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="input-email"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+
+                <!-- input password -->
+                <div class="form-outline mb-2">
+                  <label
+                    class="w-100 text-start form-label"
+                    for="input-password"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    id="input-password"
+                    class="form-control form-control-lg"
+                  />
+                </div>
+                <!-- input confirm password -->
+                <div class="form-outline mb-2">
+                  <label
+                    class="w-100 text-start form-label"
+                    for="input-confirm-password"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    id="input-confirm-password"
+                    class="form-control form-control-lg"
+                  />
+                  <!-- placeholder="Password" -->
+                </div>
+
+                <!-- checkbox -->
+                <div class="form-check d-flex justify-content-start mb-4 gap-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    value=""
+                    id="remember-password"
+                  />
+                  <label class="form-check-label" for="form1Example3">
+                    Accept terms and conditions
+                  </label>
+                </div>
+
+                <!-- button login -->
+                <button class="btn btn-primary btn-lg btn-block w-100">
+                  Sign In
+                </button>
+
+                <!-- already have account -->
+                <p class="mt-4 mb-0">
+                  Already have an account?
+                  <a href="../pages/sign-in.html" class="text-primary fw-bold"
+                    >Sign In</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
