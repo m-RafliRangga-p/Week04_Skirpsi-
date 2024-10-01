@@ -301,6 +301,40 @@ span {
     font-size: 14px;
 }
 
+.image-container-right{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex; /* Menambahkan flexbox untuk memudahkan pengaturan posisi gambar */
+    justify-content: flex-end; /* Mengatur gambar agar selalu berada di tengah kontainer */
+}
+
+.image-container-right img {
+    max-width: 600px;
+    max-height: 400px;
+    width: 100%; /* Mengatur agar gambar selalu responsif dan menyesuaikan lebar kontainer */
+    height: auto; /* Menjaga rasio aspek gambar */
+}
+
+.text-box-left {
+    position: absolute;
+    top: 50%;
+    left: -5%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
+    transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
+    background-color: rgba(255, 255, 255, 0.9); /* Warna background dengan sedikit transparansi */
+    border-radius: 10px;
+    width: 50%; /* Mengatur lebar teks agar menempati setengah dari kontainer */
+    padding: 20px; /* Menambahkan padding agar teks tidak terlalu dekat dengan batas kotak */
+}
+
+.text-box-left h4 {
+    font-weight: bold;
+}
+
+.text-box-left p {
+    font-size: 14px;
+}
+
 /* Media Query untuk Layar Kecil */
 @media (max-width: 768px) {
     .image-container {
@@ -322,9 +356,57 @@ span {
     .text-box h4, .text-box p {
         text-align: center;  /* Teks dipusatkan untuk meningkatkan keterbacaan pada layar kecil */
     }
+
+    .image-container-right {
+        justify-content: center; /* Tetap memposisikan gambar di tengah kontainer pada layar kecil */
+    }
+
+    .image-container-right img {
+        max-width: 100%;  /* Gambar akan mengambil lebar penuh dari kontainer pada layar kecil */
+        height: auto; /* Menjaga rasio aspek gambar */
+    }
+
+    .text-box-left {
+        position: static; /* Menghapus positioning absolut pada layar kecil */
+        transform: none; /* Menghilangkan transformasi posisi teks */
+        width: 100%; /* Mengatur lebar teks menjadi 100% dari kontainer pada layar kecil */
+        margin-top: 15px; /* Menambahkan jarak di antara gambar dan teks */
+    }
+
+    .text-box-left h4, .text-box-left p {
+        text-align: center;  /* Teks dipusatkan untuk meningkatkan keterbacaan pada layar kecil */
+    }
 }
 
+/* SECTION Mentor */
+.card{
+    border: none !important;
+    background-color: #F0F0F0 !important;
+}
 
+.rating i {
+    color: #fbc02d; /* Warna bintang */
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.rating span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* SECTION Courses */
+.card-promo{
+    background-color: var(--c-brand) !important;
+    color: white !important;
+}
+
+.card-promo .card-title{
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+}
 
 /* FOOTER */
 footer{
