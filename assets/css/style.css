@@ -1,19 +1,25 @@
-/* FONT IMPORT */
-@import url(../css/Poppins.css);
+/* CATATAN:
+!important digunakan untuk memastikan efek css bekerja, karena ada beberapa efek yang tidak bekerja pada bootstrap */
 
+/* FONT IMPORT */
+@import url(../css/Poppins.css); /* Mengambil font family dari file Poppins.css */
+
+/* Variabel yang sering digunakan dalam komponen website */
 :root {
-    --c-dark: #212529;
-    --c-brand: #33b5ff;
-    --c-brand-rgb: 51, 181, 255;
+    --c-dark: #212529; /* Variabel untuk warna standar hitam */
+    --c-brand: #33b5ff; /* Variabel untuk warna standar hero color brand */
+    --c-brand-rgb: 51, 181, 255; /* Variabel untuk warna standar hero color brand dalam rgb*/
     --c-white-rgb: 255, 255, 255;
     --c-dark-rgb: 33, 37, 41;
-    --c-body: #727272;
-    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
-    --transition: all 0.5s ease;
-    --font-base: "Poppins-Variable", sans-serif;
+    --c-body: #727272; /* Variabel untuk warna standar body (abu-abu) */
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08); /* Variabel standar untuk memberikan box-shadow */
+    --transition: all 0.5s ease; /* Variabel standar untuk transisi dalam item */
+    --font-base: "Poppins-Variable", sans-serif; /* Variabel standar untuk font-family yang digunakan */
 }
 
 /* CSS Default for common component */
+
+/* CSS reset dan pengaturan font family */
 * {
     padding: 0;
     margin: 0;
@@ -21,46 +27,52 @@
     font-family: var(--font-base);
 }
 
+/* Mengatur line-height di seluruh body dan warna dasar tulisan untuk semua elemen di body*/
 body{
-    line-height: 1.7;
-    color: var(--c-body);
+    line-height: 1.7 !important;
+    color: var(--c-body) !important;
 }
 
+/* Mengatur seluruh elemen heading agar font-nya menjadi bold dan warna dasarnya sesuai variabel warna dark */
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6{
-    font-weight: 600;
+    font-weight: 600 !important;
     color: var(--c-dark);
 }
 
+/* Mengatur default style untuk tag a baik ketika di hover maupun tidak */
 a{
     text-decoration: none !important;
-    color: var(--c-brand);
-    transition: var(--transition);   
 }
 
 a:hover{
-    color: var(--c-dark);
+    color: var(--c-brand) !important;
+    transition: var(--transition);   
 }
 
+/* Membuat gambar agar memiliki lebar yang selalu menyesuaikan dengan lebar containernya */
+/* Dimana jika gambar lebih besar dari container, maka gambar akan diperkecil menyesuaikan lebar containernya */
 .img-fluid {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
 }
 
+/* Memberikan jarak antar section */
 .section-padding{
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 120px;
 }
 
+/* Memberikan efek warna yang berbeda pada item yang diapit tag span */
 span {
     color: var(--c-brand);
 }
 
-/* IMAGE ZOOM to make image slightly bigger */
+/* IMAGE ZOOM digunakan untuk membuat efek memberpesar gambar 110% ketika gambar di hover 
+   Area gambar yang keluar dari container image-zoom akan disembunyikan (hidden)*/
 .image-zoom{
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari batas elemen */
 }
 
 .image-zoom-wrapper{
@@ -73,10 +85,10 @@ span {
 }
 
 .image-zoom:hover .image-zoom-wrapper img{
-    transform: scale(1.1);
+    transform: scale(1.1); /* Membuat gambar diperbesar hingga 110% dari ukuran aslinya (efek zoom) */
 }
 
-/* BTN-BRAND for all button */
+/* Membuat style standar untuk button brand yang akan digunakan pada halaman website */
 .btn{
     font-weight: 600;
     font-size: 14px;
@@ -97,32 +109,27 @@ span {
     color: white !important;
 }
 
+
 /* NAVBAR */
+/* Memberikan efek box shadow di bagian bawah navbar */
 .navbar{
     box-shadow: var(--box-shadow);
 }
 
+/* Mengatur tampilan tulisan dan warna untuk item nav-link */
 .navbar-nav .nav-link{
     font-weight: 500;
     color: var(--c-dark);
-}
-
-.navbar-nav .nav-link.active{
-    color: var(--c-brand);
-}
-
-.navbar-nav .nav-link.active{
-    color: var(--c-brand) !important;
-}
-
-.navbar-nav .nav-link{
     text-transform: uppercase;
-    color: var(--c-dark);
-    font-size: 12px;
     margin: 10px;
     padding: 10px;
     text-decoration: none;
     font-size: 16px;
+}
+
+/* Mengatur tampilan untuk nav-link dengan status active dan ketika di hover*/
+.navbar-nav .nav-link.active{
+    color: var(--c-brand) !important;
 }
 
 .navbar-nav .nav-link:hover{
@@ -131,18 +138,21 @@ span {
     border-radius: 5px;
 }
 
+/* Menambahkan icon hamburger menu karena terdapat masalah dimana icon tidak tampil pada standar bootstarp */
 .navbar-toggler-icon {
-    background-image: url("https://cdn-icons-png.flaticon.com/512/1828/1828859.png"); /* tambahkan URL ikon hamburger manual */
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1828/1828859.png"); /* Menambahkan URL ikon hamburger manual */
     width: 30px;
     height: 30px;
-    background-size: cover; /* memastikan ikon diubah ukurannya */
+    background-size: cover;
 }
 
+/* Mengatur ukuran logo pada navbar */
 .logo {
     width: 60px;
 }
 
-/* BUTTON for Login and Register*/
+/* Mengatur tampilan button login dan register, dimana button login akan berwarna putih dan memiliki border
+   Sedangkan button register akan berwarna biru dan tanpa border*/
 .btn {
     padding: 10px;
     margin: 5px;
@@ -157,7 +167,6 @@ span {
   
 .btn-login > a {
     text-transform: uppercase;
-    text-decoration: none;
     color: var(--c-brand);
     font-size: 14px;
 }
@@ -172,7 +181,6 @@ span {
   
 .btn-register > a {
     text-transform: uppercase;
-    text-decoration: none;
     color: white;
     font-size: 14px;
 }
@@ -182,44 +190,36 @@ span {
 }
 
 /* HERO or JUMBOTRON */
+/* Memberikan background image pada jumbotron */
 #hero{
     background: linear-gradient(rgba(var(--c-dark-rgb),.5), rgba(var(--c-dark-rgb),.4)), url(../img/about.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-
-#hero h1{
-    font-weight: 600;
+    /* Mengatur latar belakang dengan gradien linier transparan di atas gambar dimana Warna awal gradien dengan transparansi 50%
+    dan Warna akhir gradien dengan transparansi 40% */
+    background-position: center; /* Memposisikan latar belakang di tengah elemen secara horizontal dan vertikal */
+    background-size: cover; /* Mengatur ukuran latar belakang agar menutupi seluruh area elemen tanpa mengubah rasio aspek */
 }
 
 #hero h5{
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 /* SECTION TITLE for SECTION ABOUT US */
+/* Memberikan margin untuk elemen section-tittle */
 .section-title{
     margin-bottom: 60px;
 }
 
+/* Memberikan style untuk membuat garis di bawah section tittle */
 .section-title .line{
     width: 60px;
     height: 4px;
     background-color: var(--c-brand);
-    margin: 16px auto 24px;
-}
-
-.section-title h1{
-    font-weight: 600;
+    margin: 16px auto 24px; /* Margin atas 15px, kiri kanan auto (posisi pasti di tengah layar), bawah 24px */
 }
 
 .section-title p{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-padding {
-    padding: 60px 0;
+    max-width: 500px; /* Membatasi lebar maksimum paragraf menjadi 500 piksel */
+    margin: auto;
 }
 
 /* SECTION WHY CHOOSE US */
@@ -231,11 +231,9 @@ span {
 
 /* Kontainer Gambar */
 .image-container {
-    position: relative;
+    position: relative; /* Mengatur posisi kontainer secara relatif, digunakan untuk penempatan elemen-elemen child dengan posisi absolute */
     width: 100%;
     height: auto;
-    display: flex; /* Menambahkan flexbox untuk memudahkan pengaturan posisi gambar */
-    justify-content: flex-start; /* Mengatur gambar agar selalu berada di tengah kontainer */
 }
 
 .image-container img {
@@ -247,56 +245,27 @@ span {
 
 /* Kontainer Teks */
 .text-box {
-    position: absolute;
-    top: 50%;
-    left: 55%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
+    position: absolute; /* Teks akan diposisikan secara absolute di dalam kontainer gambar sehingga posisi elemen dapat di atur */
+    top: 50%; /* Posisi vertikal teks berada di tengah (50% dari atas) */
+    left: 55%; /* Posisi horizontal teks berada di 55% dari sisi kiri, sehingga text-box berada di sisi kanan gambar */
     transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
-    background-color: rgba(255, 255, 255, 0.9); /* Warna background dengan sedikit transparansi */
+    background-color: rgba(255, 255, 255, 0.9); /* Memberikan warna background dengan sedikit transparansi */
     border-radius: 10px;
     width: 50%; /* Mengatur lebar teks agar menempati setengah dari kontainer */
     padding: 20px; /* Menambahkan padding agar teks tidak terlalu dekat dengan batas kotak */
-}
-
-.text-box h4 {
-    font-weight: bold;
 }
 
 .text-box p {
     font-size: 14px;
 }
 
-.image-container-right{
-    position: relative;
-    width: 100%;
-    height: auto;
+#right{
     display: flex; /* Menambahkan flexbox untuk memudahkan pengaturan posisi gambar */
-    justify-content: flex-end; /* Mengatur gambar agar selalu berada di tengah kontainer */
+    justify-content: flex-end; /* Mengatur elemen flex agar ditempatkan di ujung kanan kontainer */
 }
 
-.image-container-right img {
-    max-width: 600px;
-    max-height: 400px;
-    width: 100%; /* Mengatur agar gambar selalu responsif dan menyesuaikan lebar kontainer */
-    height: auto; /* Menjaga rasio aspek gambar */
-}
-
-.text-box-left {
-    position: absolute;
-    top: 50%;
-    left: 15%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
-    transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
-    background-color: rgba(255, 255, 255, 0.9); /* Warna background dengan sedikit transparansi */
-    border-radius: 10px;
-    width: 50%; /* Mengatur lebar teks agar menempati setengah dari kontainer */
-    padding: 20px; /* Menambahkan padding agar teks tidak terlalu dekat dengan batas kotak */
-}
-
-.text-box-left h4 {
-    font-weight: bold;
-}
-
-.text-box-left p {
-    font-size: 14px;
+#left {
+    left: 15%; /* Posisi horizontal teks berada di 15% dari sisi kiri, sehingga text-box berada di sisi kiri gambar */
 }
 
 /* Media Query untuk Layar Kecil */
@@ -311,46 +280,29 @@ span {
     }
 
     .text-box {
-        position: static; /* Menghapus positioning absolut pada layar kecil */
-        transform: none; /* Menghilangkan transformasi posisi teks */
+        position: static; /* Menghapus positioning absolute pada layar kecil */
+        transform: none; /* Menghilangkan transformasi posisi text-box */
         width: 100%; /* Mengatur lebar teks menjadi 100% dari kontainer pada layar kecil */
         margin-top: 15px; /* Menambahkan jarak di antara gambar dan teks */
+        /* Efeknya adalah di layar kecil posisi text-box akan berada di bawah gambar */
     }
 
     .text-box h4, .text-box p {
         text-align: center;  /* Teks dipusatkan untuk meningkatkan keterbacaan pada layar kecil */
     }
-
-    .image-container-right {
-        justify-content: center; /* Tetap memposisikan gambar di tengah kontainer pada layar kecil */
-    }
-
-    .image-container-right img {
-        max-width: 100%;  /* Gambar akan mengambil lebar penuh dari kontainer pada layar kecil */
-        height: auto; /* Menjaga rasio aspek gambar */
-    }
-
-    .text-box-left {
-        position: static; /* Menghapus positioning absolut pada layar kecil */
-        transform: none; /* Menghilangkan transformasi posisi teks */
-        width: 100%; /* Mengatur lebar teks menjadi 100% dari kontainer pada layar kecil */
-        margin-top: 15px; /* Menambahkan jarak di antara gambar dan teks */
-    }
-
-    .text-box-left h4, .text-box-left p {
-        text-align: center;  /* Teks dipusatkan untuk meningkatkan keterbacaan pada layar kecil */
-    }
 }
 
 /* SECTION Mentor */
+/* Mengubah sedikit tampilan standar dari component card bootstarp */
 .card{
     border: none !important;
     background-color: #F0F0F0 !important;
 }
 
+/* Memberikan style pada icon star pada bagian rating */
 .rating i {
     color: #fbc02d; /* Warna bintang */
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Ukuran font 1.2 kali ukuran font root atau parent*/
     margin-right: 0.2rem;
 }
 
@@ -361,6 +313,7 @@ span {
 }
 
 /* SECTION Courses */
+/* Memberikan style yang sesuai pada bagian card-promo */
 .card-promo{
     background-color: var(--c-brand) !important;
     color: white !important;
@@ -373,6 +326,7 @@ span {
 }
 
 /* SECTION Testimoni */
+/* Memberikan style untuk bagian box/container yang membungkus testimoni */
 .testimonial-box {
     background-color: #f7f7f7;
     padding: 20px;
@@ -380,14 +334,15 @@ span {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Mengatur style untuk masing-masing tulisan yang ada dalam testimonial-box */
 .testimonial-text {
     font-size: 18px;
-    font-style: italic;
+    font-style: italic; /* Membuat font bercetak miring */
     margin-bottom: 20px;
 }
 
 .testimonial-author {
-    text-align: right;
+    text-align: right; /* Memposisikan tulisan agar berada di sisi kanan */
 }
 
 .testimonial-name {
@@ -401,19 +356,14 @@ span {
     color: #666;
 }
 
-.carousel-indicators button,
-.carousel-control-prev-icon{
-    color: var(--c-brand) !important;
-}
-
 /* FOOTER */
 footer{
-    padding-top: 120px;
+    padding-top: 70px;
 }
 
 .footer-top{
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1); /* Membuat border hanya pada bagian bawah saja untuk menghasilkan efek garis pemisah antara footer top dan bottom  */
 }
 
 .footer-bottom{
@@ -428,10 +378,11 @@ footer a{
 }
 
 footer ul{
-    list-style: none;
+    list-style: none; /* Menghilangkan style bawaan dari elemen ul  */
     padding: 0;
 }
 
+/* Membuat style untuk garis pada elemen footer */
 footer .line{
     width: 40px;
     height: 4px;
