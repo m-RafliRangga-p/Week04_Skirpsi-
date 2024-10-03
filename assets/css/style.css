@@ -223,41 +223,6 @@ span {
 }
 
 /* SECTION WHY CHOOSE US */
-/* #why .container{
-    background-color: #f5f8fa;
-    border-radius: 3%;
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.image-container img{
-    max-width: 600px;
-    max-height: 400px;
-}
-
-.text-box {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-20%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    width: 50%;
-}
-
-.text-box h4 {
-    font-weight: bold;
-}
-
-.text-box p {
-    font-size: 14px;
-} */
-
-/* SECTION WHY CHOOSE US */
 #why .container {
     background-color: #f5f8fa;
     border-radius: 3%;
@@ -284,7 +249,7 @@ span {
 .text-box {
     position: absolute;
     top: 50%;
-    left: 75%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
+    left: 55%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
     transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
     background-color: rgba(255, 255, 255, 0.9); /* Warna background dengan sedikit transparansi */
     border-radius: 10px;
@@ -318,7 +283,7 @@ span {
 .text-box-left {
     position: absolute;
     top: 50%;
-    left: -5%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
+    left: 15%; /* Mengatur posisi teks agar berada di sebelah kanan gambar */
     transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
     background-color: rgba(255, 255, 255, 0.9); /* Warna background dengan sedikit transparansi */
     border-radius: 10px;
