@@ -392,6 +392,40 @@ footer .line{
     margin: 12px auto 24px;
 }
 
+/* PAGE FAQ */
+.faq-item {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f5f8fa;
+    transition: background-color 0.5s ease;
+} 
+  
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer; /* Menampilkan kursor pointer (seperti link) saat mouse berada di atas pertanyaan */
+    color: var(--c-dark);
+}
+  
+.faq-question:hover {
+    color: var(--c-brand);
+}
+  
+.faq-answer {
+    font-size: 16px;
+    color: var(--c-dark);
+    margin-top: 10px;
+    text-align: justify;
+}
+  
+.faq-separator{
+    border: 1px solid var(--c-dark);
+}
+  
+
 
 
 
