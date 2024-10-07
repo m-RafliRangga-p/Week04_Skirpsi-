@@ -84,11 +84,19 @@
                     for="input-password"
                     >Password</label
                   >
-                  <input
-                    type="password"
-                    id="input-password"
-                    class="form-control form-control-lg"
-                  />
+                  <div class="col-lg-12 position-relative">
+                    <input
+                      type="password"
+                      id="input-password"
+                      class="form-control form-control-lg"
+                    />
+                    <i
+                      class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
+                      style="cursor: pointer"
+                      id="toggle-password"
+                      onclick="togglePassword()"
+                    ></i>
+                  </div>
                 </div>
                 <!-- input confirm password -->
                 <div class="form-outline mb-2">
@@ -97,11 +105,14 @@
                     for="input-confirm-password"
                     >Confirm Password</label
                   >
-                  <input
-                    type="password"
-                    id="input-confirm-password"
-                    class="form-control form-control-lg"
-                  />
+                  <div class="col-lg-12 position-relative">
+                    <input
+                      type="password"
+                      id="input-confirm-password"
+                      class="form-control form-control-lg"
+                    />
+                    <i class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y" style="cursor: pointer" id="toggle-confirm-password" onclick="toggleConfirmPassword();"></i>
+                  </div>
                   <!-- placeholder="Password" -->
                 </div>
 
@@ -137,6 +148,7 @@
       </div>
     </div>
 
+    <script src="../assets/js/script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

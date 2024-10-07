@@ -28,16 +28,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
-    <!-- <style>
-      #toggle-password {
-        position: absolute;
-        top: 50%;
-        right: 1.4rem;
-        transform: translateY(-50%);
-        cursor: pointer;
-      }
-    </style> -->
   </head>
   <body>
     <div
@@ -93,7 +83,7 @@
                       class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
                       style="cursor: pointer"
                       id="toggle-password"
-                      onClick="togglePassword()"
+                      onclick="togglePassword()"
                     ></i>
                   </div>
                   <!-- placeholder="Password" -->
@@ -141,6 +131,7 @@
       </div>
     </div>
 
+    <script src="../assets/js/script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -153,38 +144,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Custom JS -->
-    <script>
-      function togglePassword() {
-        const passwordInput = document.getElementById("input-password");
-        const togglePassword = document.getElementById("toggle-password");
-
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          togglePassword.classList.remove("bi-eye-slash");
-          togglePassword.classList.add("bi-eye");
-        } else {
-          passwordInput.type = "password";
-          togglePassword.classList.remove("bi-eye");
-          togglePassword.classList.add("bi-eye-slash");
-        }
-      }
-
-      // const passwordInput = document.getElementById("input-password");
-      // const togglePassword = document.createElement("i");
-      // togglePassword.className = "bi bi-eye-slash";
-      // togglePassword.style.cursor = "pointer";
-      // passwordInput.parentElement.appendChild(togglePassword);
-
-      // togglePassword.addEventListener("click", function () {
-      //   if (passwordInput.type === "password") {
-      //     passwordInput.type = "text";
-      //     this.className = "bi bi-eye";
-      //   } else {
-      //     passwordInput.type = "password";
-      //     this.className = "bi bi-eye-slash";
-      //   }
-      // });
-    </script>
+   
   </body>
 </html>

@@ -70,3 +70,33 @@ const faqData = [
     // Dimana hal ini untuk memastikan bahwa script hanya berjalan setelah halaman siap di-render
   document.addEventListener('DOMContentLoaded', renderFaqs);
   
+
+  // fungsi show password 
+  function togglePassword() {
+    const passwordInput = document.getElementById("input-password");
+    const togglePassword = document.getElementById("toggle-password");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      togglePassword.classList.remove("bi-eye-slash");
+      togglePassword.classList.add("bi-eye");
+    } else {
+      passwordInput.type = "password";
+      togglePassword.classList.remove("bi-eye");
+      togglePassword.classList.add("bi-eye-slash");
+    }
+  }
+  function toggleConfirmPassword() {
+    const passwordInput = document.getElementById("input-confirm-password");
+    const toggleConfirmPassword = document.getElementById("toggle-confirm-password");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleConfirmPassword.classList.remove("bi-eye-slash");
+      toggleConfirmPassword.classList.add("bi-eye");
+    } else {
+      passwordInput.type = "password";
+      toggleConfirmPassword.classList.remove("bi-eye");
+      toggleConfirmPassword.classList.add("bi-eye-slash");
+    }
+  }
