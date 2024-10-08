@@ -118,6 +118,21 @@ function toggleConfirmPassword(event) {
   }
 }
 
+// Fungsi untuk memvalidasi apakah email mengandung '@'
+function validateEmail(email) {
+  if (email.trim() === '') {  // Memeriksa apakah email tidak kosong
+    alert("Email tidak boleh kosong.");
+    return false; // Mengembalikan false jika email kosong
+  }
+  
+  if (!email.includes('@')) { // Memeriksa apakah email mengandung '@'
+    alert("Email tidak valid. Pastikan menggunakan '@'.");
+    return false; // Mengembalikan false jika email tidak valid
+  }
+  
+  return true; // Mengembalikan true jika email valid
+}
+
 // Variabel email dan password yang valid
 const validEmail = "user@example.com"; //Contoh variabel email
 const validPassword = "password123"; //Contoh variabel password
@@ -125,8 +140,13 @@ const validPassword = "password123"; //Contoh variabel password
 // Fungsi untuk login
 function login() {
   // Mengambil nilai dari input email dan password
-  const emailInput = document.getElementById("input-email").value;
-  const passwordInput = document.getElementById("input-password").value;
+  const emailInput = document.getElementById("input-email-in").value;
+  const passwordInput = document.getElementById("input-password-in").value;
+
+  // Memeriksa apakah email valid menggunakan fungsi validateEmail
+  if (!validateEmail(emailInput)) {
+    return; // Jika email tidak valid, hentikan eksekusi fungsi login
+  }
 
   // Cek apakah email dan password sesuai
   if (emailInput === validEmail && passwordInput === validPassword) {
