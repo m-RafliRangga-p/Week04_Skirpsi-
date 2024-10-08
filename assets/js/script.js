@@ -118,18 +118,21 @@ function toggleConfirmPassword(event) {
   }
 }
 
-// Fungsi untuk memvalidasi apakah email mengandung '@'
+// Fungsi untuk memvalidasi apakah email memiliki format yang valid
 function validateEmail(email) {
-  if (email.trim() === '') {  // Memeriksa apakah email tidak kosong
+  if (email.trim() === "") {
+    // Memeriksa apakah email tidak kosong
     alert("Email tidak boleh kosong.");
     return false; // Mengembalikan false jika email kosong
   }
-  
-  if (!email.includes('@')) { // Memeriksa apakah email mengandung '@'
-    alert("Email tidak valid. Pastikan menggunakan '@'.");
+
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex untuk memvalidasi email
+  if (!re.test(email)) {
+    // Memeriksa apakah email valid menggunakan regex
+    alert("Email tidak valid.");
     return false; // Mengembalikan false jika email tidak valid
   }
-  
+
   return true; // Mengembalikan true jika email valid
 }
 
@@ -152,23 +155,22 @@ function login() {
   if (emailInput === validEmail && passwordInput === validPassword) {
     // Jika benar, arahkan ke halaman index.html
     window.location.href = "../../index.html";
-  }
-  else if(emailInput === validEmail && passwordInput !== validPassword){
+  } else if (emailInput === validEmail && passwordInput !== validPassword) {
     // Jika password salah, tampilkan alert
     alert("Password salah. Silakan coba lagi.");
-  }
-  else if(emailInput !== validEmail && passwordInput === validPassword){
+  } else if (emailInput !== validEmail && passwordInput === validPassword) {
     // Jika email salah, tampilkan alert
     alert("Email salah. Silakan coba lagi.");
-  }
-  else {
+  } else {
     // Jika email dan password salah, tampilkan alert
     alert("Email atau password salah. Silakan coba lagi.");
   }
 }
 
 // Event listener untuk tombol Sign In
-document.querySelector(".btn-primary").addEventListener("click", function(event) {
-  event.preventDefault(); // Mencegah perilaku default dari tombol submit yang biasanya akan merefresh halaman
-  login(); // Memanggil function login
-});
+document
+  .querySelector(".btn-primary")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah perilaku default dari tombol submit yang biasanya akan merefresh halaman
+    login(); // Memanggil function login
+  });
