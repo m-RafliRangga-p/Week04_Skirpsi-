@@ -111,7 +111,12 @@
                       id="input-confirm-password"
                       class="form-control form-control-lg"
                     />
-                    <i class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y" style="cursor: pointer" id="toggle-confirm-password" onclick="toggleConfirmPassword();"></i>
+                    <i
+                      class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
+                      style="cursor: pointer"
+                      id="toggle-confirm-password"
+                      onclick="toggleConfirmPassword();"
+                    ></i>
                   </div>
                   <!-- placeholder="Password" -->
                 </div>
@@ -121,17 +126,29 @@
                   <input
                     type="checkbox"
                     class="form-check-input"
-                    value=""
-                    id="remember-password"
+                    id="accept-terms"
                   />
-                  <label class="form-check-label" for="form1Example3">
+                  <label
+                    class="form-check-label"
+                    for="accept-terms"
+                    style="cursor: pointer"
+                  >
                     Accept terms and conditions
                   </label>
                 </div>
 
+                <!-- pesan jika email error -->
+                <p id="email-error" class="text-danger" style="display: none">
+                  Email tidak valid!
+                </p>
+
                 <!-- button login -->
-                <button class="btn btn-primary btn-lg btn-block w-100">
-                  Sign In
+                <button
+                  class="btn btn-primary btn-lg btn-block w-100"
+                  id="btn-submit"
+                  disabled
+                >
+                  Sign Up
                 </button>
 
                 <!-- already have account -->
@@ -148,6 +165,35 @@
       </div>
     </div>
 
+    <script>
+      // disabled button submit jika checkbox tidak checked
+      const checkboxAcceptTerms = document.getElementById("accept-terms");
+      const btnSubmit = document.getElementById("btn-submit");
+
+      checkboxAcceptTerms.addEventListener("click", function () {
+        if (checkboxAcceptTerms.checked) {
+          btnSubmit.disabled = false;
+        } else {
+          btnSubmit.disabled = true;
+        }
+      });
+
+      const emailInput = document.getElementById("input-email");
+      const emailError = document.getElementById("email-error");
+
+      emailInput.addEventListener("input", function () {
+        if (validateEmail(emailInput.value)) {
+          emailError.style.display = "none";
+        } else {
+          emailError.style.display = "block";
+        }
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
     <script src="../assets/js/script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
