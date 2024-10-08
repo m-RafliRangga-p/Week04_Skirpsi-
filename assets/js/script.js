@@ -117,3 +117,38 @@ function toggleConfirmPassword(event) {
     toggleConfirmPassword.classList.add("bi-eye-slash");
   }
 }
+
+// Variabel email dan password yang valid
+const validEmail = "user@example.com"; //Contoh variabel email
+const validPassword = "password123"; //Contoh variabel password
+
+// Fungsi untuk login
+function login() {
+  // Mengambil nilai dari input email dan password
+  const emailInput = document.getElementById("input-email").value;
+  const passwordInput = document.getElementById("input-password").value;
+
+  // Cek apakah email dan password sesuai
+  if (emailInput === validEmail && passwordInput === validPassword) {
+    // Jika benar, arahkan ke halaman index.html
+    window.location.href = "../../index.html";
+  }
+  else if(emailInput === validEmail && passwordInput !== validPassword){
+    // Jika password salah, tampilkan alert
+    alert("Password salah. Silakan coba lagi.");
+  }
+  else if(emailInput !== validEmail && passwordInput === validPassword){
+    // Jika email salah, tampilkan alert
+    alert("Email salah. Silakan coba lagi.");
+  }
+  else {
+    // Jika email dan password salah, tampilkan alert
+    alert("Email atau password salah. Silakan coba lagi.");
+  }
+}
+
+// Event listener untuk tombol Sign In
+document.querySelector(".btn-primary").addEventListener("click", function(event) {
+  event.preventDefault(); // Mencegah perilaku default dari tombol submit yang biasanya akan merefresh halaman
+  login(); // Memanggil function login
+});
