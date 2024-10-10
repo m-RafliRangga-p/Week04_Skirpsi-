@@ -186,7 +186,7 @@ span {
 }
 
 .btn-register > a:hover {
-    color: white;
+    color: white !important;
 }
 
 /* HERO or JUMBOTRON */
