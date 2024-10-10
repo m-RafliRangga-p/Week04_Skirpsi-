@@ -154,7 +154,7 @@ function login() {
   // Cek apakah email dan password sesuai
   if (emailInput === validEmail && passwordInput === validPassword) {
     // Jika benar, arahkan ke halaman index.html
-    window.location.href = "../../index.html";
+    window.location.href = "../index.html";
   } else if (emailInput === validEmail && passwordInput !== validPassword) {
     // Jika password salah, tampilkan alert
     alert("Password salah. Silakan coba lagi.");
