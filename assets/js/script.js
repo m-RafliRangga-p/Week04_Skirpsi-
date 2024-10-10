@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", renderFaqs);
 
 //  Fungsi untuk menampilkan atau menyembunyikan password pada form sign-in
 function togglePassword() {
-  const passwordInput = document.getElementById("input-password-in");
+  const passwordInput = document.getElementById("input-password");
   const togglePassword = document.getElementById("toggle-password");
 
   if (passwordInput.type === "password") {
