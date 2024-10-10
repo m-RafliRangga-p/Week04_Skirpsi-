@@ -144,7 +144,7 @@ const validPassword = "password123"; //Contoh variabel password
 function login() {
   // Mengambil nilai dari input email dan password
   const emailInput = document.getElementById("input-email-in").value;
-  const passwordInput = document.getElementById("input-password-in").value;
+  const passwordInput = document.getElementById("input-password").value;
 
   // Memeriksa apakah email valid menggunakan fungsi validateEmail
   if (!validateEmail(emailInput)) {
