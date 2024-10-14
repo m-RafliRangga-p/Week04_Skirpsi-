@@ -128,16 +128,16 @@ $(document).ready(function() { // Memastikan bahwa script berjalan setelah halam
     mentorsList.forEach(function(mentor) { //Loop untuk setiap mentor
       const card = `
         <div class="col-lg-3 col-md-6 mt-3">
-          <div class="card" style="width: 100%">
+          <div class="card h-100" style="width: 100%">
             <div class="image-zoom">
               <div class="image-zoom-wrapper">
                 <img src="${mentor.src}" class="card-img-top" alt="${mentor.title}" />
               </div>
             </div>
-            <div class="card-body text-center">
+            <div class="card-body d-flex flex-column text-center">
               <h5 class="card-title">${mentor.title}</h5>
-              <p class="card-text">${mentor.text}</p>
-              <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text flex-grow-1">${mentor.text}</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="rating d-flex align-items-center">
                   <i class="bi bi-star-fill"></i>
                   <span class="ml-2">${mentor.rating}</span>
@@ -148,6 +148,7 @@ $(document).ready(function() { // Memastikan bahwa script berjalan setelah halam
           </div>
         </div>
       `;
+
       $('#mentor-cards').append(card); // Menambahkan card ke dalam div dengan id 'mentor-cards'.
     });
   }
@@ -237,18 +238,18 @@ $(document).ready(function() {
     courseList.forEach(function(course) {
       const card = `
         <div class="col-lg-3 col-md-6 mt-3">
-          <div class="card" style="width: 100%">
+          <div class="card h-100" style="width: 100%">
             <div class="image-zoom">
               <div class="image-zoom-wrapper">
                 <img src="${course.src}" class="card-img-top" alt="${course.title}" />
               </div>
             </div>
-            <div class="card-body text-center">
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">${course.title}</h5>
-              <p class="card-text">${course.text}</p>
-              <hr />
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="price d-flex align-items-center">
+              <p class="card-text flex-grow-1">${course.text}</p>
+              <hr>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <div class="price">
                   <span class="ml-2">${course.price}</span>
                 </div>
                 <a href="#" class="btn btn-brand">Beli</a>
@@ -257,6 +258,7 @@ $(document).ready(function() {
           </div>
         </div>
       `;
+
       $('#course-cards').append(card);
     });
   }

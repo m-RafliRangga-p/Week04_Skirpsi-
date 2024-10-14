@@ -305,10 +305,10 @@ span {
 }
 
 .card-body {
-    flex: 1; /* Pastikan card body mengambil ruang yang tersisa */
+    flex-grow: 1; /* Pastikan card body mengambil ruang yang tersisa */
     display: flex; /* Gunakan flex untuk card body */
     flex-direction: column; /* Atur konten dalam arah vertikal */
-    justify-content: space-between; /* Sebar konten agar elemen bawah tetap berada di bawah */
+    justify-content: flex-start; /* Sebar konten agar elemen bawah tetap berada di bawah */
 }
   
 
