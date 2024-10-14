@@ -77,12 +77,20 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="section-title">
-                  <h1 class="display-4">Courses</h1>
+                  <h1 class="display-4">Our Courses</h1>
                   <div class="line"></div>
                 </div>
               </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+              <form class="form-inline d-flex justify-content-center">
+                <input class="form-control" id="searchInput" type="search" placeholder="Search by name or price" aria-label="Search" />
+                <button class="btn btn-brand" type="button" id="searchBtn">Search</button>
+              </form>
+            </div>
+        </div>    
+        <div class="row" id="course-cards">
             <!-- isi konten -->
         </div>
       </div>
@@ -144,7 +152,8 @@
       </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/jQuerry.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

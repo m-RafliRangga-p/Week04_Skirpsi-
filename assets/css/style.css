@@ -297,7 +297,20 @@ span {
 .card{
     border: none !important;
     background-color: #F0F0F0 !important;
+    flex: 1 1 300px; /* Menetapkan dasar flex untuk card */
+    display: flex; /* Menjadikan card fleksibel */
+    flex-direction: column; /* Menyusun isi card secara vertikal */
+    justify-content: space-between; /* Memastikan semua konten terdistribusi dengan baik */
+    height: 100%; /* Memastikan card mengambil tinggi penuh dari container */
 }
+
+.card-body {
+    flex: 1; /* Pastikan card body mengambil ruang yang tersisa */
+    display: flex; /* Gunakan flex untuk card body */
+    flex-direction: column; /* Atur konten dalam arah vertikal */
+    justify-content: space-between; /* Sebar konten agar elemen bawah tetap berada di bawah */
+}
+  
 
 /* Memberikan style pada icon star pada bagian rating */
 .rating i {
@@ -307,6 +320,12 @@ span {
 }
 
 .rating span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.price span {
     font-size: 1rem;
     font-weight: bold;
     color: #333;
