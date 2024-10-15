@@ -49,18 +49,20 @@
               </button>
 
               <!-- Card Body -->
-              <div class="card-body px-4 py-2 text-center">
+              <form id="form-sign-in" class="card-body px-4 py-2 text-center">
                 <!-- title form -->
                 <h3 class="mb-4 fw-bolder">Sign in</h3>
 
                 <!-- input email -->
                 <div class="form-outline mb-4">
-                  <label class="w-100 text-start form-label" for="input-email"
+                  <label
+                    class="w-100 text-start form-label"
+                    for="input-email-sign-in"
                     >Email</label
                   >
                   <input
                     type="email"
-                    id="input-email-in"
+                    id="input-email-sign-in"
                     class="form-control form-control-lg"
                   />
                   <!-- placeholder="Email" -->
@@ -70,19 +72,19 @@
                 <div class="form-outline mb-4">
                   <label
                     class="w-100 text-start form-label"
-                    for="input-password"
+                    for="input-password-sign-in"
                     >Password</label
                   >
                   <div class="col-lg-12 position-relative">
                     <input
                       type="password"
-                      id="input-password"
-                      class="form-control"
+                      id="input-password-sign-in"
+                      class="form-control form-control-lg"
                     />
                     <i
                       class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
                       style="cursor: pointer"
-                      id="toggle-password-in"
+                      id="toggle-password-sign-in"
                       onclick="togglePasswordIn()"
                     ></i>
                   </div>
@@ -97,15 +99,25 @@
                     value=""
                     id="remember-password"
                   />
-                  <label class="form-check-label" for="form1Example3">
+                  <label
+                    class="form-check-label"
+                    for="remember-password"
+                    style="cursor: pointer"
+                  >
                     Remember password
                   </label>
                 </div>
 
-                <!-- button login -->
-                <button class="btn btn-primary btn-lg btn-block w-100">
-                  Sign In
-                </button>
+                <!-- button sign in -->
+                <div id="container-btn-sign-in" class="">
+                  <button
+                    id="btn-sign-in"
+                    class="btn btn-primary btn-lg btn-block w-100"
+                    disabled
+                  >
+                    Sign In
+                  </button>
+                </div>
 
                 <h4 class="my-4 fw-bold">OR</h4>
 
@@ -126,7 +138,7 @@
                     >Sign Up</a
                   >
                 </p>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -139,7 +151,7 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-    <script src="../assets/js/jQuerry.js"></script>
+    <script src="../assets//js/sign-in-JQ.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
