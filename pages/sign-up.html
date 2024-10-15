@@ -85,20 +85,20 @@
                 <div class="form-outline mb-2">
                   <label
                     class="w-100 text-start form-label"
-                    for="input-password"
+                    for="input-password-sign-up"
                     >Password</label
                   >
                   <div class="col-lg-12 position-relative">
                     <input
                       type="password"
-                      id="input-password"
+                      id="input-password-sign-up"
                       class="form-control form-control-lg"
                     />
                     <i
                       class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
                       style="cursor: pointer"
-                      id="toggle-password"
-                      onclick="togglePassword()"
+                      id="toggle-password-sign-up"
+                      onclick="togglePasswordUp()"
                     ></i>
                   </div>
                 </div>
@@ -106,20 +106,20 @@
                 <div class="form-outline mb-2">
                   <label
                     class="w-100 text-start form-label"
-                    for="input-confirm-password"
+                    for="input-confirm-password-sign-up"
                     >Confirm Password</label
                   >
                   <div class="col-lg-12 position-relative">
                     <input
                       type="password"
-                      id="input-confirm-password"
+                      id="input-confirm-password-sign-up"
                       class="form-control form-control-lg"
                     />
                     <i
                       class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
                       style="cursor: pointer"
-                      id="toggle-confirm-password"
-                      onclick="toggleConfirmPassword();"
+                      id="toggle-confirm-password-sign-up"
+                      onclick="toggleConfirmPasswordUp();"
                     ></i>
                   </div>
                 </div>
@@ -163,10 +163,13 @@
       </div>
     </div>
 
-    <!-- script utama -->
-    <script src="../assets/js/script.js"></script>
-    <!-- script validasi form sign-up -->
-    <script src="../assets//js/sign-up-form-validation.js"></script>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/js/jQuerry.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
