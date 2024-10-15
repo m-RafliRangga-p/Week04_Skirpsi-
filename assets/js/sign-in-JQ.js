@@ -112,7 +112,7 @@ function initSignInForm() {
 
       if (email === validEmail && password === validPassword) {
         alert("Sign in successful!");
-        window.location.href = "/";
+        window.location.href = "../index.html";
       } else {
         showError(signInButton, "Invalid email or password");
       }
