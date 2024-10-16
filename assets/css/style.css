@@ -449,3 +449,16 @@ footer .line{
     border-color: #dc3545;
     box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
 }
+
+/* STYLE FOR ABOUT PAGE */
+.iconbox{
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rgb),.1);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
