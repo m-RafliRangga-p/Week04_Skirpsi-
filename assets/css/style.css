@@ -33,6 +33,19 @@ body{
     color: var(--c-body) !important;
 }
 
+em{
+    font-weight: 200 !important;
+    font-size: 18px;
+}
+
+hr{
+    background-color: var(--c-dark) !important;
+}
+
+.box-shadows{
+    box-shadow: var(--box-shadow);
+}
+
 /* Mengatur seluruh elemen heading agar font-nya menjadi bold dan warna dasarnya sesuai variabel warna dark */
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6{
@@ -132,10 +145,13 @@ span {
     color: var(--c-brand) !important;
 }
 
-.navbar-nav .nav-link:hover{
-    background-color: var(--c-brand);
-    color: white !important;
-    border-radius: 5px;
+/* Media Query for Hover */
+@media (min-width: 768px) {
+    .navbar-nav .nav-link:hover{
+        background-color: var(--c-brand);
+        color: white !important;
+        border-radius: 5px;
+    }
 }
 
 /* Menambahkan icon hamburger menu karena terdapat masalah dimana icon tidak tampil pada standar bootstarp */
@@ -211,7 +227,7 @@ span {
 
 /* Memberikan style untuk membuat garis di bawah section tittle */
 .section-title .line{
-    width: 60px;
+    width: 90px;
     height: 4px;
     background-color: var(--c-brand);
     margin: 16px auto 24px; /* Margin atas 15px, kiri kanan auto (posisi pasti di tengah layar), bawah 24px */
@@ -224,7 +240,8 @@ span {
 
 /* SECTION WHY CHOOSE US */
 #why .container {
-    background-color: #f5f8fa;
+    /* background-color: #f5f8fa; */
+    background-color: #ebf8ff;
     border-radius: 3%;
     padding: 20px; /* Menambahkan padding agar konten tidak terlalu mepet dengan batas kontainer */
 }
@@ -249,7 +266,7 @@ span {
     top: 50%; /* Posisi vertikal teks berada di tengah (50% dari atas) */
     left: 55%; /* Posisi horizontal teks berada di 55% dari sisi kiri, sehingga text-box berada di sisi kanan gambar */
     transform: translate(-20%, -50%); /* Memastikan teks berpusat pada posisi yang tepat */
-    background-color: rgba(255, 255, 255, 0.9); /* Memberikan warna background dengan sedikit transparansi */
+    background-color: white; /* Memberikan warna background dengan sedikit transparansi */
     border-radius: 10px;
     width: 50%; /* Mengatur lebar teks agar menempati setengah dari kontainer */
     padding: 20px; /* Menambahkan padding agar teks tidak terlalu dekat dengan batas kotak */
@@ -257,6 +274,10 @@ span {
 
 .text-box p {
     font-size: 14px;
+}
+
+.text-box h4 {
+    color: var(--c-dark);
 }
 
 #right{
