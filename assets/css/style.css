@@ -31,6 +31,7 @@
 body{
     line-height: 1.7 !important;
     color: var(--c-body) !important;
+    font-size: 16px !important;
 }
 
 em{
@@ -273,7 +274,7 @@ span {
 }
 
 .text-box p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .text-box h4 {
@@ -323,6 +324,7 @@ span {
     flex-direction: column; /* Menyusun isi card secara vertikal */
     justify-content: space-between; /* Memastikan semua konten terdistribusi dengan baik */
     height: 100%; /* Memastikan card mengambil tinggi penuh dari container */
+    font-size: 16px !important;
 }
 
 .card-body {
