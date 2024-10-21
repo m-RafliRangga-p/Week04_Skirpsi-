@@ -432,6 +432,25 @@ footer .line{
     margin: 12px auto 24px;
 }
 
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover{
+    background-color: var(--c-brand);
+    color: white !important;
+}
+
+.social-icons i{
+    font-size: 23px;
+}
+
 /* PAGE FAQ */
 .faq-item {
     border: 1px solid #e0e0e0;
