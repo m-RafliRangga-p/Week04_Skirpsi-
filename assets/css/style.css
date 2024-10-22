@@ -132,7 +132,7 @@ span {
 
 /* Mengatur tampilan tulisan dan warna untuk item nav-link */
 .navbar-nav .nav-link{
-    font-weight: 500;
+    font-weight: 400 !important;
     color: var(--c-dark);
     text-transform: uppercase;
     margin: 10px;
@@ -144,6 +144,7 @@ span {
 /* Mengatur tampilan untuk nav-link dengan status active dan ketika di hover*/
 .navbar-nav .nav-link.active{
     color: var(--c-brand) !important;
+    font-weight: 700 !important;
 }
 
 /* Media Query for Hover */
@@ -453,6 +454,17 @@ footer .line{
     font-size: 23px;
 }
 
+.team a{
+    width: 48px;
+    height: 48px;
+    background-color: var(--c-dark);
+    color: white;
+}
+
+.team i{
+    font-size: 28px;
+}
+
 /* PAGE FAQ */
 .faq-item {
     border: 1px solid #e0e0e0;
@@ -503,4 +515,46 @@ footer .line{
     color: var(--c-brand);
     font-size: 34px;
     flex: none;
+}
+
+/*---------------------------------------
+   Speakers section              
+-----------------------------------------*/
+#speakers {
+    background: #f9f9f9;
+}
+
+#speakers h3 {
+    font-size: 17px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: 600 !important;
+}
+
+#speakers h6 {
+  color: #666;
+  margin-top: 4px;
+  text-align: center;
+  font-weight: 400 !important;
+}
+
+#speakers img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#speakers .col-md-3 {
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+}
+
+#speakers .speakers-wrapper {
+    background: #ffffff;
+    padding-bottom: 22px;
 }
