@@ -227,6 +227,14 @@ span {
     border-radius: 10px;
 }
 
+#hero-about{
+    background-color: #d5f0ff;
+}
+
+#hero-about h1, #hero-about h5{
+    color: var(--c-dark) !important;
+}
+
 /* SECTION TITLE for SECTION ABOUT US */
 /* Memberikan margin untuk elemen section-tittle */
 .section-title{
@@ -540,14 +548,14 @@ footer .line{
 }
 
 .team a{
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     background-color: var(--c-dark);
     color: white;
 }
 
 .team i{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 /* PAGE FAQ */
@@ -606,7 +614,7 @@ footer .line{
    Speakers section              
 -----------------------------------------*/
 #speakers {
-    background: #f9f9f9;
+    background: white;
 }
 
 #speakers h3 {

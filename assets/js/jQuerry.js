@@ -249,7 +249,6 @@ $(document).ready(function () {
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">${course.title}</h5>
               <p class="card-text flex-grow-1">${course.text}</p>
-              <hr>
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="price">
                   <span class="ml-2">${course.price}</span>
