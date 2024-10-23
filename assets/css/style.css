@@ -651,3 +651,45 @@ footer .line{
     background: #ffffff;
     padding-bottom: 22px;
 }
+
+/* Modal for Mentor Page */
+.nama-dosen h5{
+    font-weight: 400 !important;
+}
+
+.hr-modal {
+    width: 100%; /* Mengatur lebar garis */
+    border-top: 2px solid var(--c-dark); /* Garis dengan ketebalan dan warna */
+    margin: 10px auto; /* Menempatkan garis di tengah secara horizontal */
+}
+
+.keterangan-item p{
+    text-align: justify !important;
+    margin-left: 5%;
+}
+
+.keterangan-list p{
+    margin-left: 0 !important;
+}
+
+.skill-dosen span {
+    color: var(--c-dark);
+    background-color: #d5f0ff;
+    border-radius: 50%;
+    width: 85px; /* Tentukan ukuran tetap untuk lingkaran */
+    height: 60px;
+    display: inline-flex; /* Memastikan elemen berada dalam satu baris dan terpusat */
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Tambahkan spasi antar lingkaran */
+    font-weight: 500 !important;
+}
+
+@media (min-width: 768px) {
+    .modal-lg{
+        width: 720px !important;
+    }
+    .hr-modal{
+        width: 88% !important;
+    }
+}

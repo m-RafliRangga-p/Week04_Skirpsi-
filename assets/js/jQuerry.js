@@ -139,9 +139,9 @@ $(document).ready(function () {
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="rating d-flex align-items-center">
                   <i class="bi bi-star-fill"></i>
-                  <span class="ml-2">${mentor.rating}</span>
+                  <span class="ms-1">${mentor.rating}</span>
                 </div>
-                <a href="#" class="btn btn-brand">Read More</a>
+                <a href="#" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Read More</a>
               </div>
             </div>
           </div>
