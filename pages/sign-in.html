@@ -28,122 +28,223 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <!-- custom style -->
+    <style>
+      .form-control:focus {
+        box-shadow: none;
+      }
+
+      .btn-socmed {
+        border: 1px solid skyblue;
+        border-radius: 50px;
+        background-color: rgba(2, 220, 120, 0.1);
+        width: 30%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-socmed span {
+        font-weight: bold;
+        text-transform: capitalize;
+        color: rgb(95, 95, 95);
+      }
+    </style>
   </head>
   <body>
-    <div
-      class="min-vh-100 d-flex align-items-center justify-content-center"
-      style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-      <div class="container py-3">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <!-- Card Form Login -->
-            <div class="card shadow-lg" style="border-radius: 1rem">
-              <!-- button back -->
-              <button class="btn btn-block text-start">
-                <a
-                  href="../index.html"
-                  class="text-decoration-none text-primary"
-                  ><i class="bi bi-arrow-left me-2"></i>Back</a
-                >
-              </button>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="logo"
+            src="../assets/img/Light-removebg-preview.png"
+            alt="logo-Skripsi+"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/mentors.html">Mentors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/faq.html">FaQ's</a>
+            </li>
+          </ul>
+          <button class="btn btn-login">
+            <a href="./pages/sign-in.html">Login</a>
+          </button>
+          <button class="btn btn-register">
+            <a href="./pages/sign-up.html">Register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-              <!-- Card Body -->
-              <form id="form-sign-in" class="card-body px-4 py-2 text-center">
-                <!-- title form -->
-                <h3 class="mb-4 fw-bolder">Sign in</h3>
+    <!-- main -->
+    <main class="container p-4">
+      <div class="row">
+        <!-- left side -->
+        <div class="col-md-6">
+          <div class="logo-placeholder text-center">
+            <img src="https://placehold.co/500" alt="" />
+          </div>
+        </div>
 
-                <!-- input email -->
-                <div class="form-outline mb-4">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-email-sign-in"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="input-email-sign-in"
-                    class="form-control form-control-lg"
-                  />
-                  <!-- placeholder="Email" -->
-                </div>
+        <!-- right side -->
+        <div class="col-md-6 p-4">
+          <!-- title -->
+          <h3 class="mb-4 text-center">Welcome Back <span>👋</span></h3>
 
-                <!-- input password -->
-                <div class="form-outline mb-4">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-password-sign-in"
-                    >Password</label
-                  >
-                  <div class="col-lg-12 position-relative">
-                    <input
-                      type="password"
-                      id="input-password-sign-in"
-                      class="form-control form-control-lg"
-                    />
-                    <i
-                      class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
-                      style="cursor: pointer"
-                      id="toggle-password-sign-in"
-                      onclick="togglePasswordIn()"
-                    ></i>
-                  </div>
-                  <!-- placeholder="Password" -->
-                </div>
-
-                <!-- checkbox -->
-                <div class="form-check d-flex justify-content-start mb-4 gap-2">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    value=""
-                    id="remember-password"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="remember-password"
-                    style="cursor: pointer"
-                  >
-                    Remember password
-                  </label>
-                </div>
-
-                <!-- button sign in -->
-                <div id="container-btn-sign-in" class="">
-                  <button
-                    id="btn-sign-in"
-                    class="btn btn-primary btn-lg btn-block w-100"
-                    disabled
-                  >
-                    Sign In
-                  </button>
-                </div>
-
-                <h4 class="my-4 fw-bold">OR</h4>
-
-                <!-- sso -->
-                <div class="">
-                  <button class="btn btn-danger rounded-circle" type="submit">
-                    <i class="bi bi-google"></i>
-                  </button>
-                  <button class="btn btn-dark rounded-circle" type="submit">
-                    <i class="bi bi-github"></i>
-                  </button>
-                </div>
-
-                <!-- don't have account -->
-                <p class="mt-4 mb-0">
-                  Don't have an account?
-                  <a href="../pages/sign-up.html" class="text-primary fw-bold"
-                    >Sign Up</a
-                  >
-                </p>
-              </form>
+          <!-- form -->
+          <form>
+            <!-- input email -->
+            <div class="form-outline mb-4">
+              <label class="form-label fw-bold" for="input-email-sign-in"
+                >Email</label
+              >
+              <div class="col-lg-12 position-relative">
+                <i
+                  class="bi bi-envelope position-absolute top-50 start-0 ps-3 translate-middle-y"
+                ></i>
+                <input
+                  type="email"
+                  id="input-email-sign-in"
+                  class="form-control form-control-lg ps-5"
+                  placeholder="Masukkan Email"
+                />
+              </div>
             </div>
+
+            <!-- input password -->
+            <div class="form-outline mb-4">
+              <label class="form-label fw-bold" for="input-password-sign-in"
+                >Password</label
+              >
+              <div class="col-lg-12 position-relative">
+                <i
+                  class="bi bi-lock position-absolute top-50 start-0 ps-3 translate-middle-y"
+                ></i>
+                <input
+                  type="password"
+                  id="input-password-sign-in"
+                  class="form-control form-control-lg ps-5"
+                  placeholder="Masukkan Password"
+                />
+                <i
+                  class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
+                  style="cursor: pointer"
+                  id="toggle-password-sign-in"
+                  onclick="togglePasswordIn()"
+                ></i>
+              </div>
+            </div>
+
+            <!-- lupa password -->
+            <div class="d-flex justify-content-end align-items-center">
+              <a href="#" style="cursor: pointer; color: black">
+                Lupa Password?
+              </a>
+            </div>
+
+            <!-- button sign in -->
+            <div id="container-btn-sign-in" class="mt-4">
+              <button id="btn-sign-in" class="btn btn-primary w-100" disabled>
+                MASUK
+              </button>
+            </div>
+          </form>
+
+          <!-- atau lanjut dengan -->
+          <div class="text-center mt-3 te">
+            <span class="text-dark fw-semibold">- Atau lanjutkan dengan -</span>
+          </div>
+
+          <!-- icon login -->
+          <div class="d-flex justify-content-center gap-2 mt-2">
+            <button class="btn btn-socmed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.98em"
+                height="1em"
+                viewBox="0 0 256 262"
+              >
+                <path
+                  fill="#4285f4"
+                  d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622l38.755 30.023l2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                />
+                <path
+                  fill="#34a853"
+                  d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055c-34.523 0-63.824-22.773-74.269-54.25l-1.531.13l-40.298 31.187l-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                />
+                <path
+                  fill="#fbbc05"
+                  d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82c0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602z"
+                />
+                <path
+                  fill="#eb4335"
+                  d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0C79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                />
+              </svg>
+              <span>Google</span>
+            </button>
+            <button class="btn btn-socmed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="#1877f2"
+                  d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"
+                />
+                <path
+                  fill="#fff"
+                  d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"
+                />
+              </svg>
+              <span> Facebook </span>
+            </button>
+          </div>
+
+          <!-- belum punya akun -->
+          <div class="text-center mt-3">
+            <span class="text-muted"
+              >Belum punya akun?
+              <a
+                href="sign-up.html"
+                class="text-primary fw-bold text-decoration-underline"
+                >Daftar</a
+              ></span
+            >
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <!-- JQuery -->
     <script
