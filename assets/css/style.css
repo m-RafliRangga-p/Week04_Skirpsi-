@@ -558,3 +558,9 @@ footer .line{
     background: #ffffff;
     padding-bottom: 22px;
 }
+
+.jumbotron {
+    max-width: 95%;
+    margin: auto;
+    border-radius: 10px;
+}
