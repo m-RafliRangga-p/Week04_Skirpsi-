@@ -23,10 +23,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <!-- Icons Bootsrap -->
+
+    <!-- icons remix -->
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
     <!-- custom style -->
@@ -39,7 +40,7 @@
         border: 1px solid skyblue;
         border-radius: 50px;
         background-color: rgba(2, 220, 120, 0.1);
-        width: 30%;
+        width: 100%;
         height: 3rem;
         display: flex;
         align-items: center;
@@ -79,26 +80,26 @@
         <div class="collapse navbar-collapse" id="Nav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/about.html">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/mentors.html">Mentors</a>
+              <a class="nav-link" href="mentors.html">Mentors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/courses.html">Courses</a>
+              <a class="nav-link" href="courses.html">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/faq.html">FaQ's</a>
+              <a class="nav-link" href="faq.html">FaQ's</a>
             </li>
           </ul>
           <button class="btn btn-login">
-            <a href="./pages/sign-in.html">Login</a>
+            <a href="sign-in.html">Login</a>
           </button>
           <button class="btn btn-register">
-            <a href="./pages/sign-up.html">Register</a>
+            <a href="sign-up.html">Register</a>
           </button>
         </div>
       </div>
@@ -108,14 +109,14 @@
     <main class="container p-4">
       <div class="row">
         <!-- left side -->
-        <div class="col-md-6">
+        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
           <div class="logo-placeholder text-center">
-            <img src="https://placehold.co/500" alt="" />
+            <img src="https://placehold.co/500" alt="" class="img-fluid" />
           </div>
         </div>
 
         <!-- right side -->
-        <div class="col-md-6 p-4">
+        <div class="col-lg-6 col-md-12 p-4">
           <!-- title -->
           <h3 class="mb-4 text-center">Welcome Back <span>👋</span></h3>
 
@@ -128,13 +129,16 @@
               >
               <div class="col-lg-12 position-relative">
                 <i
-                  class="bi bi-envelope position-absolute top-50 start-0 ps-3 translate-middle-y"
+                  class="ri-mail-line position-absolute top-50 start-0 ps-3 translate-middle-y"
                 ></i>
+                <!-- <i
+                  class="bi bi-envelope position-absolute top-50 start-0 ps-3 translate-middle-y"
+                ></i> -->
                 <input
                   type="email"
                   id="input-email-sign-in"
                   class="form-control form-control-lg ps-5"
-                  placeholder="Masukkan Email"
+                  placeholder="your@email.com"
                 />
               </div>
             </div>
@@ -146,16 +150,16 @@
               >
               <div class="col-lg-12 position-relative">
                 <i
-                  class="bi bi-lock position-absolute top-50 start-0 ps-3 translate-middle-y"
+                  class="ri-lock-2-line position-absolute top-50 start-0 ps-3 translate-middle-y"
                 ></i>
                 <input
                   type="password"
                   id="input-password-sign-in"
                   class="form-control form-control-lg ps-5"
-                  placeholder="Masukkan Password"
+                  placeholder="• • • • •"
                 />
                 <i
-                  class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
+                  class="ri-eye-off-line position-absolute top-50 end-0 pe-3 translate-middle-y"
                   style="cursor: pointer"
                   id="toggle-password-sign-in"
                   onclick="togglePasswordIn()"
