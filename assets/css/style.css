@@ -676,8 +676,8 @@ footer .line{
     color: var(--c-dark);
     background-color: #d5f0ff;
     border-radius: 50%;
-    width: 85px; /* Tentukan ukuran tetap untuk lingkaran */
-    height: 60px;
+    width: 125px; /* Tentukan ukuran tetap untuk lingkaran */
+    height: 30px;
     display: inline-flex; /* Memastikan elemen berada dalam satu baris dan terpusat */
     justify-content: center;
     align-items: center;
