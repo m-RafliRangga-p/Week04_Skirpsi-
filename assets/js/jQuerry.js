@@ -253,7 +253,7 @@ $(document).ready(function () {
                 <div class="price">
                   <span class="ml-2">${course.price}</span>
                 </div>
-                <a href="#" class="btn btn-brand">Beli</a>
+                <a href="detail-courses.html" class="btn btn-brand">Detail</a>
               </div>
             </div>
           </div>

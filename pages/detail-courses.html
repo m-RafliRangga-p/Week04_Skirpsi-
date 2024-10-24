@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="icon"
+      href="../assets/img/Light-modified.png"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- CDN for Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <!-- Masih menggunakan navbar standar dari bootstrap dengan 
+      penambahan logo berupa image dan 2 buah button serta custom style -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="logo"
+            src="../assets/img/Light-removebg-preview.png"
+            alt="logo-Skripsi+"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mentors.html">Mentors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FaQ's</a>
+            </li>
+          </ul>
+          <button class="btn btn-login">
+            <a href="sign-in.html">Login</a>
+          </button>
+          <button class="btn btn-register">
+            <a href="sign-up.html">Register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Membuat bagian main dari website dengan beberapa section -->
+    <main class="mb-5">
+      <div class="container mt-5">
+
+            <div class="row">
+            <div class="col-12">
+                <h1 class="display-4">Web Programming</h1>
+            </div>
+            </div>
+
+            <div class="detail-icon d-lg-flex align-items-center mt-2">
+                <div class="rating d-flex align-items-center">
+                    <i class="ri-team-fill detail"></i>
+                    <span class="ms-1">337 Siswa Terdaftar</span>
+                </div>
+                <div class="rating d-flex align-items-center ms-lg-5">
+                    <i class="bi bi-star-fill detail"></i>
+                    <span class="ms-1">4.9</span>
+                </div>
+                <div class="rating d-flex align-items-center ms-lg-5">
+                    <i class="ri-global-fill detail"></i>
+                    <span class="ms-1">Online - Self Learning</span>
+                </div>
+            </div>
+
+            <div class="deskripsi-course p-4 mt-3">
+            <h3>Deskripsi</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde velit
+                itaque minima ad dolore perferendis adipisci tenetur dolorum iste
+                blanditiis enim architecto, inventore voluptatem qui ut
+                exercitationem fuga assumenda distinctio maiores nostrum! Magnam
+                quia expedita maiores repudiandae saepe ipsam nam aut ipsa obcaecati
+                perspiciatis voluptatibus voluptatum aliquam reprehenderit, aperiam,
+                qui illum animi soluta quae eius vel ut iste! Ab molestias minus
+                perferendis voluptatum quam commodi rem. Aperiam in cum obcaecati
+                similique, sequi veritatis recusandae nobis nihil distinctio!
+                Voluptatem, modi dolore laborum numquam et cum est sed similique
+                eveniet quia, assumenda fuga perspiciatis! Quidem obcaecati esse
+                nostrum, enim asperiores deserunt tempora quam magnam officiis eos
+                inventore repellat aliquam dolorem alias repudiandae excepturi
+                accusamus explicabo repellendus beatae? Architecto tempore beatae
+                rerum ad nam fugiat et dicta nesciunt at! Hic porro excepturi
+                quisquam sed reprehenderit error, eius nam esse deleniti, ratione
+                beatae reiciendis ipsam eaque repudiandae numquam quibusdam commodi
+                sit impedit laboriosam facilis.
+            </p>
+            </div>
+
+            <div class="accordion-detail mt-3 p-4">
+                <h3>Silabus</h3>
+                <hr class="accordion mt-4">
+                <div class="accordion pb-4" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Learning-path #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <div class="rating d-flex align-items-center ms-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Tips And Trick Pembuatan Judul Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                            <div class="rating d-flex align-items-center ms-2 mt-1 mt-sm-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Cara Penulisan Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Learning-path #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <div class="rating d-flex align-items-center ms-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Tips And Trick Pembuatan Judul Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                            <div class="rating d-flex align-items-center ms-2 mt-1 mt-sm-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Cara Penulisan Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Learning-path #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <div class="rating d-flex align-items-center ms-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Tips And Trick Pembuatan Judul Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                            <div class="rating d-flex align-items-center ms-2 mt-1 mt-sm-2">
+                                <i class="ri-lock-2-fill bag"></i>
+                                <a class="ms-1" href="">Cara Penulisan Skripsi</a>
+                                <i class="ri-arrow-right-s-line detail ms-1"></i>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-detail mt-5 d-flex justify-content-end">
+               <a href="courses.html"><button type="button" class="btn btn-outline-danger">Back</button></a> 
+               <button type="button" class="btn btn-brand">Buy Course</button>
+            </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 text-center">
+              <a href="#"
+                ><img
+                  src="../assets/img/Dark-removebg-preview.png"
+                  alt="logo footer"
+              /></a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Facilis, veniam.
+              </p>
+              <p>+628555913000</p>
+              <p>www.Skripsi+.edu.id</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <h5 class="mb-0 text-white text-center">QUICK LINKS</h5>
+              <div class="line"></div>
+              <ul class="text-center">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="mentors.html">Mentors</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FaQ's</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <h5 class="mb-0 text-white text-center">FIND US</h5>
+              <div class="line"></div>
+              <div
+                class="social-icons text-center d-flex flex-column align-items-center"
+              >
+                <div class="row">
+                  <div class="col-6">
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <p>Youtube</p>
+                  </div>
+                  <div class="col-6">
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <p>Instagram</p>
+                  </div>
+                  <div class="col-6">
+                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <p>Github</p>
+                  </div>
+                  <div class="col-6">
+                    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                    <p>LinkedIn</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <p class="mb-0">© Copyright Skripsi<sup>+</sup></p>
+            </div>
+            <div class="col-auto">
+              <p class="mb-0">Code By <a href="#">Group 12</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/js/jQuerry.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
