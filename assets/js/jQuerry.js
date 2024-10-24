@@ -70,51 +70,43 @@ $(document).ready(function () {
   // Array object berisi informasi mentor
   const mentors = [
     {
-      src: "../assets/img/dosen.png",
-      title: "Nur Cahaya Hikari",
-      text: "Experienced Data Scientist with a passion for teaching.",
+      src: "../assets/img/William-John.png",
+      title: "William John",
       rating: "4.9",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Ahmad Yani",
-      text: "Front-end Developer with a knack for problem solving.",
+      src: "../assets/img/Monica-Sephani.png",
+      title: "Monica Sephani",
       rating: "4.8",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Siti Aisyah",
-      text: "AI Engineer focusing on cutting-edge machine learning technologies.",
+      src: "../assets/img/River-Scott.png",
+      title: "River Scott",
       rating: "5.0",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Dewi Pratiwi",
-      text: "Cybersecurity expert with 10+ years of experience.",
-      rating: "4.7",
+      src: "../assets/img/William-John.png",
+      title: "William John",
+      rating: "4.9",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Ahmad Yani",
-      text: "Front-end Developer with a knack for problem solving.",
+      src: "../assets/img/Monica-Sephani.png",
+      title: "Monica Sephani",
       rating: "4.8",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Siti Aisyah",
-      text: "AI Engineer focusing on cutting-edge machine learning technologies.",
+      src: "../assets/img/River-Scott.png",
+      title: "River Scott",
       rating: "5.0",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Ahmad Yani",
-      text: "Front-end Developer with a knack for problem solving.",
+      src: "../assets/img/Monica-Sephani.png",
+      title: "Monica Sephani",
       rating: "4.8",
     },
     {
-      src: "../assets/img/dosen.png",
-      title: "Siti Aisyah",
-      text: "AI Engineer focusing on cutting-edge machine learning technologies.",
+      src: "../assets/img/River-Scott.png",
+      title: "River Scott",
       rating: "5.0",
     },
   ];
@@ -134,14 +126,13 @@ $(document).ready(function () {
               </div>
             </div>
             <div class="card-body d-flex flex-column text-center">
-              <h5 class="card-title">${mentor.title}</h5>
-              <p class="card-text flex-grow-1">${mentor.text}</p>
+              <h5 class="card-title mb-3">${mentor.title}</h5>
               <div class="mt-auto d-flex justify-content-between align-items-center">
                 <div class="rating d-flex align-items-center">
                   <i class="bi bi-star-fill"></i>
                   <span class="ms-1">${mentor.rating}</span>
                 </div>
-                <a href="#" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Read More</a>
+                <a href="#" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Detail</a>
               </div>
             </div>
           </div>
@@ -179,59 +170,59 @@ $(document).ready(function () {
   // Array object berisi informasi course
   const courses = [
     {
-      src: "../assets/img/course.jpg",
-      title: "Metode Penelitian",
-      text: "Kursus ini mencakup metode dan teknik yang digunakan dalam penelitian ilmiah.",
-      price: "Rp 500.000,- / Month",
+      src: "../assets/img/programming.png",
+      title: "Web Programming",
+      text: "Course ini memberikan pengenalan komprehensif tentang pemrograman web, mencakup pengembangan front-end dan back-end.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Pemrograman Web",
-      text: "Pelajari cara membangun website dari dasar hingga mahir.",
-      price: "Rp 450.000,- / Month",
+      src: "../assets/img/skripsi.png",
+      title: "Penyusunan Skripsi",
+      text: "Course ini memberikan pengenalan komprehensif tentang cara menyusun skripsi yang baik, mencakup tata cara penulisan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Machine Learning",
-      text: "Pengenalan tentang pembelajaran mesin dan algoritma AI.",
-      price: "Rp 600.000,- / Month",
+      src: "../assets/img/jaringan.png",
+      title: "Komputer & Jaringan",
+      text: "Course ini memberikan pengenalan komprehensif tentang proyek dalam bidang komputer dan jaringan yang dapat menjadi bahan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Desain UI/UX",
-      text: "Kursus lengkap untuk membangun antarmuka yang intuitif dan ramah pengguna.",
-      price: "Rp 400.000,- / Month",
+      src: "../assets/img/programming.png",
+      title: "Web Programming",
+      text: "Course ini memberikan pengenalan komprehensif tentang pemrograman web, mencakup pengembangan front-end dan back-end.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Pemrograman Web",
-      text: "Pelajari cara membangun website dari dasar hingga mahir.",
-      price: "Rp 450.000,- / Month",
+      src: "../assets/img/skripsi.png",
+      title: "Penyusunan Skripsi",
+      text: "Course ini memberikan pengenalan komprehensif tentang cara menyusun skripsi yang baik, mencakup tata cara penulisan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Machine Learning",
-      text: "Pengenalan tentang pembelajaran mesin dan algoritma AI.",
-      price: "Rp 600.000,- / Month",
+      src: "../assets/img/jaringan.png",
+      title: "Komputer & Jaringan",
+      text: "Course ini memberikan pengenalan komprehensif tentang proyek dalam bidang komputer dan jaringan yang dapat menjadi bahan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Metode Penelitian",
-      text: "Kursus ini mencakup metode dan teknik yang digunakan dalam penelitian ilmiah.",
-      price: "Rp 500.000,- / Month",
+      src: "../assets/img/skripsi.png",
+      title: "Penyusunan Skripsi",
+      text: "Course ini memberikan pengenalan komprehensif tentang cara menyusun skripsi yang baik, mencakup tata cara penulisan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Pemrograman Web",
-      text: "Pelajari cara membangun website dari dasar hingga mahir.",
-      price: "Rp 450.000,- / Month",
+      src: "../assets/img/jaringan.png",
+      title: "Komputer & Jaringan",
+      text: "Course ini memberikan pengenalan komprehensif tentang proyek dalam bidang komputer dan jaringan yang dapat menjadi bahan skripsi.",
+      price: "IDR 500,000",
     },
     {
-      src: "../assets/img/course.jpg",
-      title: "Machine Learning",
-      text: "Pengenalan tentang pembelajaran mesin dan algoritma AI.",
-      price: "Rp 600.000,- / Month",
-    },
+      src: "../assets/img/skripsi.png",
+      title: "Penyusunan Skripsi",
+      text: "Course ini memberikan pengenalan komprehensif tentang cara menyusun skripsi yang baik, mencakup tata cara penulisan skripsi.",
+      price: "IDR 500,000",
+    }
   ];
 
   // Fungsi untuk render card course

@@ -210,7 +210,7 @@ span {
 /* HERO or JUMBOTRON */
 /* Memberikan background image pada jumbotron */
 #hero{
-    background: linear-gradient(rgba(var(--c-dark-rgb),.5), rgba(var(--c-dark-rgb),.4)), url(../img/about.jpeg);
+    background: linear-gradient(rgba(var(--c-dark-rgb),.5), rgba(var(--c-dark-rgb),.4)), url(../img/hero.png);
     /* Mengatur latar belakang dengan gradien linier transparan di atas gambar dimana Warna awal gradien dengan transparansi 50%
     dan Warna akhir gradien dengan transparansi 40% */
     background-position: center; /* Memposisikan latar belakang di tengah elemen secara horizontal dan vertikal */
@@ -221,6 +221,15 @@ span {
     font-weight: 400 !important;
 }
 
+.btn-hero{
+    background-color: var(--c-brand) !important;
+}
+
+.btn-hero:hover{
+    background-color: var(--c-brand) !important;
+    color: white !important;
+}
+
 .jumbotron {
     max-width: 95%;
     margin: auto;
@@ -228,11 +237,11 @@ span {
 }
 
 #hero-about{
-    background-color: #d5f0ff;
-}
-
-#hero-about h1, #hero-about h5{
-    color: var(--c-dark) !important;
+    background: linear-gradient(rgba(var(--c-dark-rgb),.5), rgba(var(--c-dark-rgb),.4)), url(../img/hero-about.png);
+    /* Mengatur latar belakang dengan gradien linier transparan di atas gambar dimana Warna awal gradien dengan transparansi 50%
+    dan Warna akhir gradien dengan transparansi 40% */
+    background-position: center; /* Memposisikan latar belakang di tengah elemen secara horizontal dan vertikal */
+    background-size: cover; /* Mengatur ukuran latar belakang agar menutupi seluruh area elemen tanpa mengubah rasio aspek */
 }
 
 /* SECTION TITLE for SECTION ABOUT US */
@@ -290,8 +299,8 @@ span {
 }
 
 .circle i {
-    font-size: 20px;
-    color: var(--c-dark);
+    font-size: 40px;
+    color: white;
 }
 
 .point-item strong{
@@ -320,7 +329,7 @@ span {
 /* SECTION WHY CHOOSE US */
 #why .container {
     /* background-color: #f5f8fa; */
-    background-color: #ebf8ff;
+    background-color: #F0F0F0;
     border-radius: 3%;
     padding: 20px; /* Menambahkan padding agar konten tidak terlalu mepet dengan batas kontainer */
 }
@@ -366,6 +375,7 @@ span {
 
 #left {
     left: 15%; /* Posisi horizontal teks berada di 15% dari sisi kiri, sehingga text-box berada di sisi kiri gambar */
+    background-color: #d5f0ff !important;
 }
 
 /* Media Query untuk Layar Kecil */
@@ -403,6 +413,12 @@ span {
     justify-content: space-between; /* Memastikan semua konten terdistribusi dengan baik */
     height: 100%; /* Memastikan card mengambil tinggi penuh dari container */
     font-size: 16px !important;
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 100% !important;
+    }
 }
 
 .card-body {
@@ -656,7 +672,7 @@ footer .line{
 }
 
 #speakers .speakers-wrapper {
-    background: #ffffff;
+    background: #F0F0F0 ;
     padding-bottom: 22px;
 }
 
@@ -684,7 +700,8 @@ footer .line{
     color: var(--c-dark);
     background-color: #d5f0ff;
     border-radius: 25px;
-    width: 125px; /* Tentukan ukuran tetap untuk lingkaran */
+    padding: 0 10px;
+    width: auto; /* Tentukan ukuran tetap untuk lingkaran */
     height: 30px;
     display: inline-flex; /* Memastikan elemen berada dalam satu baris dan terpusat */
     justify-content: center;
@@ -759,6 +776,12 @@ footer .line{
 
 .accordion-button:focus {
     box-shadow: none !important; /* Menghilangkan efek bayangan saat fokus */
+}
+
+@media (max-width: 768px) {
+    .logo-placeholder{
+      display: none;
+    }
 }
 
 
