@@ -23,141 +23,185 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <!-- Icons Bootsrap -->
+
+    <!-- icons remix -->
     <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
   </head>
   <body>
-    <div
-      class="min-vh-100 d-flex align-items-center justify-content-center"
-      style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-      <div class="container py-3">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <!-- Card Form Login -->
-            <div class="card shadow-lg" style="border-radius: 1rem">
-              <!-- button back -->
-              <button class="btn btn-block text-start">
-                <a
-                  href="../index.html"
-                  class="text-decoration-none text-primary"
-                  ><i class="bi bi-arrow-left me-2"></i>Back</a
-                >
-              </button>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="logo"
+            src="../assets/img/Light-removebg-preview.png"
+            alt="logo-Skripsi+"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Nav"
+          aria-controls="Nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mentors.html">Mentors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FaQ's</a>
+            </li>
+          </ul>
+          <button class="btn btn-login">
+            <a href="sign-in.html">Login</a>
+          </button>
+          <button class="btn btn-register">
+            <a href="sign-up.html">Register</a>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-              <!-- Card Body -->
-              <div class="card-body px-4 py-2 text-center">
-                <!-- title form -->
-                <h3 class="mb-4 fw-bolder">Sign Up</h3>
+    <!-- main -->
+    <div class="container p-4">
+      <div class="row">
+        <!-- left side -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 p-4">
+          <!-- title -->
+          <h3 class="mb-4 text-center">Sign Up</h3>
 
-                <!-- input username -->
-                <div class="form-outline mb-2">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-username-sign-up"
-                    >Username</label
-                  >
-                  <input
-                    type="text"
-                    id="input-username-sign-up"
-                    class="form-control form-control-lg"
-                  />
-                </div>
+          <!-- form -->
+          <form>
+            <!-- input username -->
+            <div class="form-outline mb-2">
+              <label class="form-label fw-bold" for="input-username-sign-up"
+                >Username</label
+              >
+              <input
+                type="text"
+                id="input-username-sign-up"
+                class="form-control form-control-lg"
+                placeholder="your name"
+              />
+            </div>
 
-                <!-- input email -->
-                <div class="form-outline mb-2">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-email-sign-up"
-                    >Email</label
-                  >
-                  <input
-                    type="email"
-                    id="input-email-sign-up"
-                    class="form-control form-control-lg"
-                  />
-                </div>
+            <!-- input email -->
+            <div class="form-outline mb-2">
+              <label class="form-label fw-bold" for="input-email-sign-up"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="input-email-sign-up"
+                class="form-control form-control-lg"
+                placeholder="your@email.com"
+              />
+            </div>
 
-                <!-- input password -->
-                <div class="form-outline mb-2">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-password-sign-up"
-                    >Password</label
-                  >
-                  <div class="col-lg-12 position-relative">
-                    <input
-                      type="password"
-                      id="input-password-sign-up"
-                      class="form-control form-control-lg"
-                    />
-                    <i
-                      class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
-                      style="cursor: pointer"
-                      id="toggle-password-sign-up"
-                      onclick="togglePasswordUp()"
-                    ></i>
-                  </div>
-                </div>
-                <!-- input confirm password -->
-                <div class="form-outline mb-2">
-                  <label
-                    class="w-100 text-start form-label"
-                    for="input-confirm-password-sign-up"
-                    >Confirm Password</label
-                  >
-                  <div class="col-lg-12 position-relative">
-                    <input
-                      type="password"
-                      id="input-confirm-password-sign-up"
-                      class="form-control form-control-lg"
-                    />
-                    <i
-                      class="bi bi-eye-slash position-absolute top-50 end-0 pe-3 translate-middle-y"
-                      style="cursor: pointer"
-                      id="toggle-confirm-password-sign-up"
-                      onclick="toggleConfirmPasswordUp();"
-                    ></i>
-                  </div>
-                </div>
-
-                <!-- checkbox -->
-                <div class="form-check d-flex justify-content-start mb-4 gap-2">
-                  <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="accept-terms"
-                  />
-                  <label
-                    class="form-check-label"
-                    for="accept-terms"
-                    style="cursor: pointer"
-                  >
-                    Accept terms and conditions
-                  </label>
-                </div>
-
-                <!-- button login -->
-                <button
-                  class="btn btn-primary btn-lg btn-block w-100"
-                  id="btn-sign-up"
-                  disabled
-                >
-                  Sign Up
-                </button>
-
-                <!-- already have account -->
-                <p class="mt-4 mb-0">
-                  Already have an account?
-                  <a href="../pages/sign-in.html" class="text-primary fw-bold"
-                    >Sign In</a
-                  >
-                </p>
+            <!-- input password -->
+            <div class="form-outline mb-2">
+              <label class="form-label fw-bold" for="input-password-sign-up"
+                >Password</label
+              >
+              <div class="col-lg-12 position-relative">
+                <input
+                  type="password"
+                  id="input-password-sign-up"
+                  class="form-control form-control-lg"
+                  placeholder="• • • • •"
+                />
+                <i
+                  class="ri-eye-off-line position-absolute top-50 end-0 pe-3 translate-middle-y"
+                  style="cursor: pointer"
+                  id="toggle-password-sign-up"
+                  onclick="togglePasswordUp()"
+                ></i>
               </div>
             </div>
+            <!-- input confirm password -->
+            <div class="form-outline mb-2">
+              <label
+                class="form-label fw-bold"
+                for="input-confirm-password-sign-up"
+                >Confirm Password</label
+              >
+              <div class="col-lg-12 position-relative">
+                <input
+                  type="password"
+                  id="input-confirm-password-sign-up"
+                  class="form-control form-control-lg"
+                  placeholder="• • • • •"
+                />
+                <i
+                  class="ri-eye-off-line position-absolute top-50 end-0 pe-3 translate-middle-y"
+                  style="cursor: pointer"
+                  id="toggle-confirm-password-sign-up"
+                  onclick="toggleConfirmPasswordUp();"
+                ></i>
+              </div>
+            </div>
+
+            <!-- checkbox -->
+            <div class="form-check d-flex justify-content-start mb-4 gap-2">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="accept-terms"
+              />
+              <label
+                class="form-check-label"
+                for="accept-terms"
+                style="cursor: pointer"
+              >
+                Accept terms and conditions
+              </label>
+            </div>
+
+            <!-- button login -->
+            <button
+              class="btn btn-primary btn-lg btn-block w-100"
+              id="btn-sign-up"
+              disabled
+            >
+              Sign Up
+            </button>
+          </form>
+
+          <!-- already have account -->
+          <div class="mt-4 text-center">
+            <span class="text-muted"> Sudah punya akun? </span>
+            <a
+              href="../pages/sign-in.html"
+              class="text-primary fw-bold text-decoration-underline"
+              >Masuk</a
+            >
+          </div>
+        </div>
+
+        <!-- right side -->
+        <div
+          class="col-lg-6 col-md-12 d-flex align-items-center justify-content-sm-center justify-content-lg-start"
+        >
+          <div class="logo-placeholder text-center">
+            <img src="https://placehold.co/500" alt="img" class="img-fluid" />
           </div>
         </div>
       </div>

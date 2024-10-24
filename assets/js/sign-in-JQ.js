@@ -11,12 +11,12 @@ function togglePasswordIn() {
     // tampilkan password
     passwordInput.attr("type", "text");
     // ubah icon toggle menjadi eye
-    togglePassword.removeClass("bi-eye-slash").addClass("bi-eye");
+    togglePassword.removeClass("ri-eye-off-line").addClass("ri-eye-line");
   } else {
     // sembunyikan password
     passwordInput.attr("type", "password");
     // ubah icon toggle menjadi eye-slash
-    togglePassword.removeClass("bi-eye").addClass("bi-eye-slash");
+    togglePassword.removeClass("ri-eye-line").addClass("ri-eye-off-line");
   }
 }
 
